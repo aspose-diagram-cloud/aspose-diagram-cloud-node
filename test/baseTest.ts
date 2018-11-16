@@ -26,8 +26,8 @@ import * as api from "../src/api";
 
 let storageApi;
 
-const AppSid = "84220e69-32e2-41c4-ba2f-662a0a01433e";
-const AppKey = "883dc8d6b8ecd879dae35cb363e9eb56";
+const AppSid = "xxxxxxxx";
+const AppKey = "xxxxxx";
 const ApiURL = "https://api.aspose.cloud/v1.1"
 
 /**
