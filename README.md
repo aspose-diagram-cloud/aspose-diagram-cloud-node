@@ -1,4 +1,4 @@
-# Aspose.diagram Cloud SDK for Node.js [![npm](https://badge.fury.io/js/asposediagramcloud.svg)](https://www.npmjs.com/package/asposediagramcloud)
+# Aspose.Diagram Cloud SDK for Node.js [![npm](https://badge.fury.io/js/asposediagramcloud.svg)](https://www.npmjs.com/package/asposediagramcloud)
 This repository contains Aspose.diagram Cloud SDK for Node.js source code. This SDK allows you to work with Aspose.diagram Cloud REST APIs in your nodejs applications quickly and easily, with zero initial cost.
 
 # Key Features
