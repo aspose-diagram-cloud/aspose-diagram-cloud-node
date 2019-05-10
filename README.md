@@ -22,9 +22,6 @@ From the command line:
 
 	npm install asposediagramcloud --save
 	
-### Sample usage
-
-```
 ## Resources
 + [**Website**](https://www.aspose.cloud)
 + [**Product Home**](https://products.aspose.cloud/diagram)
