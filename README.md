@@ -25,6 +25,11 @@ From the command line:
 ### Sample usage
 
 ```
-
-## Contact Us
-Your feedback is very important to us. Please feel free to contact us using our [Support Forums](https://forum.aspose.cloud/c/Diagram).
+## Resources
++ [**Website**](https://www.aspose.cloud)
++ [**Product Home**](https://products.aspose.cloud/diagram)
++ [**Documentation**](https://docs.aspose.cloud/display/diagramcloud/Home)
++ [**API Reference**](https://apireference.aspose.cloud/diagram/)
++ [**Free Support Forum**](https://forum.aspose.cloud/c/diagram)
++ [**Paid Support Helpdesk**](https://helpdesk.aspose.cloud/)
++ [**Blog**](https://blog.aspose.cloud/category/diagram/)
