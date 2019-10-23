@@ -25,17 +25,20 @@
 import * as api from "../src/api";
 
 let storageApi;
+let diagramApi;
 
-const AppSid = "xxxxxxxx";
-const AppKey = "xxxxxx";
-const ApiURL = "https://api.aspose.cloud/v1.1"
+const AppSid = "yourClientId";
+const AppKey = "yourClientSecret";
+const ApiURL = "https://api.aspose.cloud/v3.0"
 
 /**
  * Initialize DiagramApi
  */
-export function initializeDiagramFileApi() {
-    const diagramFileApi = new api.DiagramFileApi(AppSid, AppKey);
-    return diagramFileApi;
+export function initializeDiagramApi() {
+    if (!diagramApi) {
+        diagramApi = new api.DiagramApi(AppSid, AppKey);
+    }
+    return diagramApi;
 }
 
 /**
@@ -43,9 +46,7 @@ export function initializeDiagramFileApi() {
  */
 export function initializeStorageApi() {
     if (!storageApi) {
-        const StorageApi = require("asposestoragecloud");
-
-        storageApi = new StorageApi({ appSid: AppSid, apiKey: AppKey, baseURI: ApiURL });
+        storageApi = new api.StorageApi(AppSid, AppKey);
     }
 
     return storageApi;

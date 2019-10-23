@@ -24,8 +24,7 @@
 
 import { IAuthentication, OAuth  } from "../internal/auth";
 const defaultBasePath = "https://api.aspose.cloud";
-//const defaultBasePath = "http://api.aspose.cloud";
-const apiVersion = "v1.1";
+const apiVersion = "v3.0";
 
 /**
  * Words API configuration
@@ -73,5 +72,12 @@ export class Configuration {
      */
     public getApiBaseUrl(): string {
         return this.baseUrl + "/" + apiVersion;
+    }
+
+        /**
+     * Returns api base url
+     */
+    public getAuthApiBaseUrl(): string {
+        return this.baseUrl;
     }
 }

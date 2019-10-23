@@ -87,8 +87,9 @@ async function invokeApiMethodInternal(requestOptions: request.Options, confgura
     }
 
     requestOptions.headers["x-aspose-client"] = "nodejs sdk";
-    requestOptions.headers["x-aspose-client-version"] = "18.3";
-    //requestOptions.proxy="http://127.0.0.1:8888";
+    requestOptions.headers["x-aspose-client-version"] = "19.10";
+    //requestOptions.proxy="http://localhost:8888";
+    //requestOptions.rejectUnauthorized=false;
 
     const auth = confguration.authentication;
     if (!notApplyAuthToRequest) {
