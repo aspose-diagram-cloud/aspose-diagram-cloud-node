@@ -63,7 +63,9 @@ It gives you an ability to:
 
 # Usage
 Please, add the following [nmpjs distribution](https://www.npmjs.com/package/asposediagramcloud) to your project.
-
+```
+$ npm install asposediagramcloud --save
+```
 # Examples
 Please, look at [Examples](EXAMPLES.md) document for basic usage or use the [Examples](Examples) folder for more sophisticated scenarios.
 
