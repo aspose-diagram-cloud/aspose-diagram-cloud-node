@@ -1,6 +1,6 @@
 {
   "name": "asposediagramcloud",
-  "version": "19.10.0",
+  "version": "20.3.0",
   "description": "Aspose.Diagram Cloud SDK for Node.js",
   "keywords": [
     "Aspose",
@@ -14,9 +14,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/aspose-diagram-cloud/aspose-diagram-cloud-node.git"
+    "url": "git+https://github.com/aspose-diagram-cloud/aspose-diagram-cloud-node.git"
   },
-  "readmeFilename": "README.md",
   "main": "dist/api.js",
   "types": "dist/api.d.ts",
   "scripts": {
@@ -52,5 +51,12 @@
     "ts-node": "^4.0.2",
     "tslint": "^5.8.0",
     "typescript": "^2.7.1"
+  },
+  "bugs": {
+    "url": "https://github.com/aspose-diagram-cloud/aspose-diagram-cloud-node/issues"
+  },
+  "homepage": "https://github.com/aspose-diagram-cloud/aspose-diagram-cloud-node#readme",
+  "directories": {
+    "test": "test"
   }
 }
