@@ -1,101 +1,121 @@
-[Aspose.Diagram Cloud](https://products.aspose.cloud/Diagram) helps you develop diagrams manipulation applications. Our REST API based Diagram Cloud SDK allows your applications to work with Microsoft Visio Object Model. 
+Node.js Cloud SDK wraps Aspose.Diagram REST API so you could seamlessly integrate Microsoft Visio® file generation, manipulation, conversion & processing features into your own Node.js applications.
 
-This repository contains Aspose.Diagram Cloud SDK source code. This SDK allows you to work with Aspose.Diagram Cloud REST APIs in your applications quickly and easily, with zero initial cost.
+# Process Visio® Files in the Cloud
+[Aspose.Diagram Cloud SDK for Node.js](https://products.aspose.cloud/diagram/nodejs) helps you develop Visio file manipulation applications while using the REST API. Diagram Cloud SDK allows your applications to work with Microsoft Visio Object Model in order to create the diragrams from scratch, edit existing diagrams or convert diagrams to popular formats including PDF, HTML, images and other Visio formats.
 
-To use this SDK, you will need App SID and App Key which can be looked up at [Aspose Cloud Dashboard](https://dashboard.aspose.cloud/#/apps) (free registration in Aspose Cloud is required for this).
+## Diagram Processing Features
+- Programmatically create new Microsoft Visio diagrams via API.
+- Convert Visio flow-charts to other supported formats.
+- Retrieve document information of a Visio file.
+- Export Visio files to raster images, fixed-layout and HTML formats.
+- Upload your business oriented Visio diagrams to cloud storage.
 
+Please refer to [Developer's Guide](https://docs.aspose.cloud/display/diagramcloud/Developer+Guide) to see what else you can achieve.
 
-# Features
+## New Features in Version 20.3
 
-### Support Import Formats  
-* VSDX
-* VDX
-* VSD
-* VSX
-* VTX
-* VSSX
-* VSTX
-* VSDM
-* VSSM
-* VSTM
-* VDW
-* VSS
-* VST
+Added support to draw following objects on a page:
+- Polyline
+- Line
+- Ellipse
 
-### Support Export Formats  
-* VSDX
-* VDX
-* VSX
-* VTX
-* VSSX
-* VSTX
-* VSDM
-* VSSM
-* VSTM
-* PDF
-* XPS
-* SWF
-* SVG
-* EMF
-* JPEG
-* PNG
-* BMP
-* TIFF
-* HTML
+Added support to:
+- Set page setting  
+- Add new empty page
+- Get pages info
 
-### Supported Operations
-* Convert document format
-* Create new document
-* Upload document and save it with supported format
-* Download document with supported format 
+For the detailed notes, please visit [Aspose.Diagram Cloud 20.3 Release Notes](https://docs.aspose.cloud/display/diagramcloud/Aspose.Diagram+Cloud+20.3+Release+Notes).
 
-For the complete list of use-cases, please refer to [common operations format support map](https://docs.aspose.cloud/display/diagramcloud/Supported+File+Formats#SupportedFileFormats-CommonOperationsFormatSupportMap) to see what you can achieve!
+## Read & Write Visio File Formats
 
+**Microsoft Visio:** VSDX, VSX, VTX, VDX, VSSX, VSTX, VSDM, VSSM, VSTM
 
-# Storage API support
-#### Since version 19.10, SDK includes support of storage operations for better user experience and unification, so now there's no need to use 2 different SDKs!
+## Save Visio Diagrams As
+
+**Fixed Layout:** PDF, XPS
+**Images:** JPEG, PNG, BMP, TIFF, SVG, EMF
+**Web:** HTML
+**Other:** XAML, SWF
+
+## Read Visio Formats
+
+**Microsoft Visio:** VDW, VSD, VSS, VST
+
+## Integrated Storage API
+
+Since version 19.10, SDK includes support of storage operations for better user experience and unification, so now there's no need to use 2 different SDKs!
 
 It gives you an ability to:
-* Upload, download, copy, move and delete files, including versions handling (if you are using Cloud storage that supports this feature - true by default)
-* Create, copy, move and delete folders
-* Copy and move files and folders accross separate storages in scope of a single operation
-* Check if certain file, folder or storage exists
 
-# Usage
-Please, add the following [nmpjs distribution](https://www.npmjs.com/package/asposediagramcloud) to your project.
+- Upload, download, copy, move and delete files, including versions handling (if you are using Cloud storage that supports this feature - true by default).
+- Create, copy, move and delete folders.
+- Copy and move files and folders across separate storages in scope of a single operation.
+- Check if certain file, folder or storage exists.
+
+## Getting Started with Aspose.Diagram Cloud SDK for Node.js
+
+Firstly, create an account at [Aspose for Cloud](https://dashboard.aspose.cloud/#/apps) to get your application information and free quota to use the API. Now execute `npm install aspose-diagram-cloud-node --save` from the command line to install Aspose.Diagram Cloud SDK for Node.js via NPM.
+
+The complete source code is available at [GitHub Repository](https://github.com/aspose-diagram-cloud/aspose-diagram-cloud-node).
+
+## Create a Diagram File in the Cloud via Node.js
+
+```js
+const { DiagramFileApi, DiagramFile_PutCreateRequest } = require("asposediagramcloud");
+
+var AppSid = ""
+var AppKey = ""
+
+diagramFileApi = new DiagramFileApi(AppSid, AppKey);
+
+var req = new DiagramFile_PutCreateRequest();
+req.name = "output.vdx";
+req.isOverwrite = true;
+
+diagramFileApi.diagramFilePutCreate(req).then((result) => {
+    console.log('API Response:', result);
+}).catch(function(err) {
+    // deal with error
+    console.log('Error:', err);
+});
 ```
-$ npm install asposediagramcloud --save
+
+## Convert Visio to PDF in the Cloud via Node.js
+
+```js
+const { DiagramFileApi, DiagramFile_PostSaveAsRequest, FileFormatRequest } = require("asposediagramcloud");
+
+var AppSid = ""
+var AppKey = ""
+
+diagramFileApi = new DiagramFileApi(AppSid, AppKey);
+
+var StorageApi = require("asposestoragecloud")
+var config = {'appSid':AppSid, 'apiKey':AppKey};
+var storageApi = new StorageApi(config);
+
+var fileName = 'template.vsd';
+var data_path = '../your path/';
+
+storageApi.PutCreate(fileName, versionId=null, storage=null, file= data_path + fileName , function(responseMessage) {
+	console.log('status:', responseMessage.status);
+	console.log('body:', responseMessage.body);
+});
+
+var req = new DiagramFile_PostSaveAsRequest();
+var format = new FileFormatRequest();
+format.format = "pdf";
+req.name = fileName;
+req.isOverwrite = true;
+req.newfilename = "output.pdf";
+req.format = format;
+
+diagramFileApi.diagramFilePostSaveAs(req).then((result) => {
+    console.log('API Response:', result);
+}).catch(function(err) {
+    // deal with error
+    console.log('Error:', err);
+});
 ```
-# Examples
-Please, look at [Examples](EXAMPLES.md) document for basic usage or use the [Examples](Examples) folder for more sophisticated scenarios.
 
-### Aspose Cloud-hosted service VS on-premise deployment (*experimental feature*)
-Starting from v19.10, you can choose either to use Aspose Cloud-hosted image processing service (the standard way) or the Docker image from Docker Hub deployed on-premise to serve the requests.
-The details about key differences and deployment process will be described on the dedicated Docker Hub page as soon as it's released.
-
-To succeed with your on-premise service usage by the SDK, you need to:
-1. Use the new API class constructor with clientId and clientSecret parameters.
-```
-let diagramApi = new api.DiagramApi(AppSid, AppKey);
-```
-2. Set *storage* or *storageName* parameters for each request where they're present (mandatory!).
-
-# Tests
-Tests are intended for internal usage only.
-
-# Licensing
-All Aspose.Diagram Cloud SDKs, helper scripts and templates are licensed under [MIT License](LICENSE).
-
-# Contact Us
-Your feedback is very important to us. Please feel free to contact via
-+ [**Free Support Forum**](https://forum.aspose.cloud/c/diagram)
-+ [**Paid Support Helpdesk**](https://helpdesk.aspose.cloud/)
-
-# Resources
-+ [**Website**](https://www.aspose.cloud)
-+ [**Product Home**](https://products.aspose.cloud/diagram)
-+ [**Documentation**](https://docs.aspose.cloud/display/diagramcloud/Home)
-+ [**API Reference**](https://apireference.aspose.cloud/diagram/)
-+ [**Free Support Forum**](https://forum.aspose.cloud/c/diagram)
-+ [**Paid Support Helpdesk**](https://helpdesk.aspose.cloud/)
-+ [**Blog**](https://blog.aspose.cloud/category/diagram/
+[Product Page](https://products.aspose.cloud/diagram/nodejs) | [Documentation](https://docs.aspose.cloud/display/diagramcloud/Home) | [Live Demo](https://products.aspose.app/diagram/family) | [API Reference](https://apireference.aspose.cloud/diagram/) | [Code Samples](https://github.com/aspose-diagram-cloud/aspose-diagram-cloud-node) | [Blog](https://blog.aspose.cloud/category/diagram/) | [Free Support](https://forum.aspose.cloud/c/diagram) | [Free Trial](https://dashboard.aspose.cloud/#/apps)

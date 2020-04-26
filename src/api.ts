@@ -197,6 +197,281 @@ export class DiagramApi {
         const result =  ObjectSerializer.deserialize(response.body, "SaveAsResponse");
         return Promise.resolve({body: result, response});
     }
+     /**
+     * Add new empty page
+     * @param requestObj contains request parameters
+     */
+    public async diagramNamePagesAddNewPut(requestObj: model.PutNewPageRequest): Promise<{response: http.ClientResponse, body: model.ModifyResponse}> {
+        if (requestObj === null || requestObj === undefined) {
+            throw new Error('Required parameter "requestObj" was null or undefined when calling diagramNamePagesAddNewPut.');
+        }
+
+        let localVarPath = this.configuration.getApiBaseUrl() + "/diagram/{name}/pages/addNew"
+            .replace("{" + "name" + "}", String(requestObj.name));
+        const queryParameters: any = {};
+
+        // verify required parameter 'requestObj.name' is not null or undefined
+        if (requestObj.name === null || requestObj.name === undefined) {
+            throw new Error('Required parameter "requestObj.name" was null or undefined when calling diagramNamePagesAddNewPut.');
+        }
+
+        // verify required parameter 'requestObj.pageName' is not null or undefined
+        if (requestObj.pageName === null || requestObj.pageName === undefined) {
+            throw new Error('Required parameter "requestObj.pageName" was null or undefined when calling diagramNamePagesAddNewPut.');
+        }
+        
+        localVarPath = addQueryParameterToUrl(localVarPath, queryParameters, "pageName", requestObj.pageName);
+        localVarPath = addQueryParameterToUrl(localVarPath, queryParameters, "folder", requestObj.folder);
+        const requestOptions: request.Options = {
+            method: "PUT",
+            qs: queryParameters,
+            uri: localVarPath,
+            json: true,
+        };
+
+        const response = await invokeApiMethod(requestOptions, this.configuration);
+        const result =  ObjectSerializer.deserialize(response.body, "ModifyResponse");
+        return Promise.resolve({body: result, response});
+    }
+
+    /**
+     * Read pages info.
+     * @param requestObj contains request parameters
+     */
+    public async diagramNamePagesGet(requestObj: model.GetPagesRequest): Promise<{response: http.ClientResponse, body: model.ApiResponseOfListOfPageData}> {
+        if (requestObj === null || requestObj === undefined) {
+            throw new Error('Required parameter "requestObj" was null or undefined when calling diagramNamePagesGet.');
+        }
+
+        let localVarPath = this.configuration.getApiBaseUrl() + "/diagram/{name}/pages"
+            .replace("{" + "name" + "}", String(requestObj.name));
+        const queryParameters: any = {};
+
+        // verify required parameter 'requestObj.name' is not null or undefined
+        if (requestObj.name === null || requestObj.name === undefined) {
+            throw new Error('Required parameter "requestObj.name" was null or undefined when calling diagramNamePagesGet.');
+        }
+        
+        localVarPath = addQueryParameterToUrl(localVarPath, queryParameters, "folder", requestObj.folder);
+        const requestOptions: request.Options = {
+            method: "GET",
+            qs: queryParameters,
+            uri: localVarPath,
+            json: true,
+        };
+
+        const response = await invokeApiMethod(requestOptions, this.configuration);
+        const result =  ObjectSerializer.deserialize(response.body, "ApiResponseOfListOfPageData");
+        return Promise.resolve({body: result, response});
+    }
+
+    /**
+     * Remove Page
+     * @param requestObj contains request parameters
+     */
+    public async diagramNamePagesPageNameDelete(requestObj: model.DeletePageRequest): Promise<{response: http.ClientResponse, body: model.ModifyResponse}> {
+        if (requestObj === null || requestObj === undefined) {
+            throw new Error('Required parameter "requestObj" was null or undefined when calling diagramNamePagesPageNameDelete.');
+        }
+
+        let localVarPath = this.configuration.getApiBaseUrl() + "/diagram/{name}/pages/{pageName}"
+            .replace("{" + "name" + "}", String(requestObj.name))
+            .replace("{" + "pageName" + "}", String(requestObj.pageName));
+        const queryParameters: any = {};
+
+        // verify required parameter 'requestObj.name' is not null or undefined
+        if (requestObj.name === null || requestObj.name === undefined) {
+            throw new Error('Required parameter "requestObj.name" was null or undefined when calling diagramNamePagesPageNameDelete.');
+        }
+
+        // verify required parameter 'requestObj.pageName' is not null or undefined
+        if (requestObj.pageName === null || requestObj.pageName === undefined) {
+            throw new Error('Required parameter "requestObj.pageName" was null or undefined when calling diagramNamePagesPageNameDelete.');
+        }
+        
+        localVarPath = addQueryParameterToUrl(localVarPath, queryParameters, "folder", requestObj.folder);
+        const requestOptions: request.Options = {
+            method: "DELETE",
+            qs: queryParameters,
+            uri: localVarPath,
+            json: true,
+        };
+
+        const response = await invokeApiMethod(requestOptions, this.configuration);
+        const result =  ObjectSerializer.deserialize(response.body, "ModifyResponse");
+        return Promise.resolve({body: result, response});
+    }
+
+    /**
+     * page setup
+     * @param requestObj contains request parameters
+     */
+    public async diagramNamePagesPageSetupPost(requestObj: model.PostPageSetupRequest): Promise<{response: http.ClientResponse, body: model.ModifyResponse}> {
+        if (requestObj === null || requestObj === undefined) {
+            throw new Error('Required parameter "requestObj" was null or undefined when calling diagramNamePagesPageSetupPost.');
+        }
+
+        let localVarPath = this.configuration.getApiBaseUrl() + "/diagram/{name}/pages/PageSetup"
+            .replace("{" + "name" + "}", String(requestObj.name));
+        const queryParameters: any = {};
+
+        // verify required parameter 'requestObj.name' is not null or undefined
+        if (requestObj.name === null || requestObj.name === undefined) {
+            throw new Error('Required parameter "requestObj.name" was null or undefined when calling diagramNamePagesPageSetupPost.');
+        }
+
+        // verify required parameter 'requestObj.pageName' is not null or undefined
+        if (requestObj.pageName === null || requestObj.pageName === undefined) {
+            throw new Error('Required parameter "requestObj.pageName" was null or undefined when calling diagramNamePagesPageSetupPost.');
+        }
+
+        // verify required parameter 'requestObj.pageSetting' is not null or undefined
+        if (requestObj.pageSetting === null || requestObj.pageSetting === undefined) {
+            throw new Error('Required parameter "requestObj.pageSetting" was null or undefined when calling diagramNamePagesPageSetupPost.');
+        }
+        
+        localVarPath = addQueryParameterToUrl(localVarPath, queryParameters, "pageName", requestObj.pageName);
+        localVarPath = addQueryParameterToUrl(localVarPath, queryParameters, "folder", requestObj.folder);
+        const requestOptions: request.Options = {
+            method: "POST",
+            qs: queryParameters,
+            uri: localVarPath,
+            json: true,
+            body: (requestObj.pageSetting == null) ? null : ObjectSerializer.serialize(requestObj.pageSetting, requestObj.pageSetting.constructor.name === "Object" ? "PageSetting" : requestObj.pageSetting.constructor.name),
+        };
+
+        const response = await invokeApiMethod(requestOptions, this.configuration);
+        const result =  ObjectSerializer.deserialize(response.body, "ModifyResponse");
+        return Promise.resolve({body: result, response});
+    }
+     /**
+     * draw ellipse on the page.
+     * @param requestObj contains request parameters
+     */
+    public async diagramNamePagesPageNameDrawEllipsePut(requestObj: model.PutDrawEllipseRequest): Promise<{response: http.ClientResponse, body: model.ModifyResponse}> {
+        if (requestObj === null || requestObj === undefined) {
+            throw new Error('Required parameter "requestObj" was null or undefined when calling diagramNamePagesPageNameDrawEllipsePut.');
+        }
+
+        let localVarPath = this.configuration.getApiBaseUrl() + "/diagram/{name}/pages/{pageName}/drawEllipse"
+            .replace("{" + "name" + "}", String(requestObj.name))
+            .replace("{" + "pageName" + "}", String(requestObj.pageName));
+        const queryParameters: any = {};
+
+        // verify required parameter 'requestObj.name' is not null or undefined
+        if (requestObj.name === null || requestObj.name === undefined) {
+            throw new Error('Required parameter "requestObj.name" was null or undefined when calling diagramNamePagesPageNameDrawEllipsePut.');
+        }
+
+        // verify required parameter 'requestObj.pageName' is not null or undefined
+        if (requestObj.pageName === null || requestObj.pageName === undefined) {
+            throw new Error('Required parameter "requestObj.pageName" was null or undefined when calling diagramNamePagesPageNameDrawEllipsePut.');
+        }
+
+        // verify required parameter 'requestObj.ellipseData' is not null or undefined
+        if (requestObj.ellipseData === null || requestObj.ellipseData === undefined) {
+            throw new Error('Required parameter "requestObj.ellipseData" was null or undefined when calling diagramNamePagesPageNameDrawEllipsePut.');
+        }
+        
+        localVarPath = addQueryParameterToUrl(localVarPath, queryParameters, "folder", requestObj.folder);
+        const requestOptions: request.Options = {
+            method: "PUT",
+            qs: queryParameters,
+            uri: localVarPath,
+            json: true,
+            body: (requestObj.ellipseData == null) ? null : ObjectSerializer.serialize(requestObj.ellipseData, requestObj.ellipseData.constructor.name === "Object" ? "EllipseData" : requestObj.ellipseData.constructor.name),
+        };
+
+        const response = await invokeApiMethod(requestOptions, this.configuration);
+        const result =  ObjectSerializer.deserialize(response.body, "ModifyResponse");
+        return Promise.resolve({body: result, response});
+    }
+
+    /**
+     * draw line on the page.
+     * @param requestObj contains request parameters
+     */
+    public async diagramNamePagesPageNameDrawLinePut(requestObj: model.PutDrawLineRequest): Promise<{response: http.ClientResponse, body: model.ModifyResponse}> {
+        if (requestObj === null || requestObj === undefined) {
+            throw new Error('Required parameter "requestObj" was null or undefined when calling diagramNamePagesPageNameDrawLinePut.');
+        }
+
+        let localVarPath = this.configuration.getApiBaseUrl() + "/diagram/{name}/pages/{pageName}/drawLine"
+            .replace("{" + "name" + "}", String(requestObj.name))
+            .replace("{" + "pageName" + "}", String(requestObj.pageName));
+        const queryParameters: any = {};
+
+        // verify required parameter 'requestObj.name' is not null or undefined
+        if (requestObj.name === null || requestObj.name === undefined) {
+            throw new Error('Required parameter "requestObj.name" was null or undefined when calling diagramNamePagesPageNameDrawLinePut.');
+        }
+
+        // verify required parameter 'requestObj.pageName' is not null or undefined
+        if (requestObj.pageName === null || requestObj.pageName === undefined) {
+            throw new Error('Required parameter "requestObj.pageName" was null or undefined when calling diagramNamePagesPageNameDrawLinePut.');
+        }
+
+        // verify required parameter 'requestObj.lineData' is not null or undefined
+        if (requestObj.lineData === null || requestObj.lineData === undefined) {
+            throw new Error('Required parameter "requestObj.lineData" was null or undefined when calling diagramNamePagesPageNameDrawLinePut.');
+        }
+        
+        localVarPath = addQueryParameterToUrl(localVarPath, queryParameters, "folder", requestObj.folder);
+        const requestOptions: request.Options = {
+            method: "PUT",
+            qs: queryParameters,
+            uri: localVarPath,
+            json: true,
+            body: (requestObj.lineData == null) ? null : ObjectSerializer.serialize(requestObj.lineData, requestObj.lineData.constructor.name === "Object" ? "LineData" : requestObj.lineData.constructor.name),
+        };
+
+        const response = await invokeApiMethod(requestOptions, this.configuration);
+        const result =  ObjectSerializer.deserialize(response.body, "ModifyResponse");
+        return Promise.resolve({body: result, response});
+    }
+
+    /**
+     * draw polyline on the page.
+     * @param requestObj contains request parameters
+     */
+    public async diagramNamePagesPageNameDrawPolylinePut(requestObj: model.PutDrawPolylineRequest): Promise<{response: http.ClientResponse, body: model.ModifyResponse}> {
+        if (requestObj === null || requestObj === undefined) {
+            throw new Error('Required parameter "requestObj" was null or undefined when calling diagramNamePagesPageNameDrawPolylinePut.');
+        }
+
+        let localVarPath = this.configuration.getApiBaseUrl() + "/diagram/{name}/pages/{pageName}/drawPolyline"
+            .replace("{" + "name" + "}", String(requestObj.name))
+            .replace("{" + "pageName" + "}", String(requestObj.pageName));
+        const queryParameters: any = {};
+
+        // verify required parameter 'requestObj.name' is not null or undefined
+        if (requestObj.name === null || requestObj.name === undefined) {
+            throw new Error('Required parameter "requestObj.name" was null or undefined when calling diagramNamePagesPageNameDrawPolylinePut.');
+        }
+
+        // verify required parameter 'requestObj.pageName' is not null or undefined
+        if (requestObj.pageName === null || requestObj.pageName === undefined) {
+            throw new Error('Required parameter "requestObj.pageName" was null or undefined when calling diagramNamePagesPageNameDrawPolylinePut.');
+        }
+
+        // verify required parameter 'requestObj.polylineData' is not null or undefined
+        if (requestObj.polylineData === null || requestObj.polylineData === undefined) {
+            throw new Error('Required parameter "requestObj.polylineData" was null or undefined when calling diagramNamePagesPageNameDrawPolylinePut.');
+        }
+        
+        localVarPath = addQueryParameterToUrl(localVarPath, queryParameters, "folder", requestObj.folder);
+        const requestOptions: request.Options = {
+            method: "PUT",
+            qs: queryParameters,
+            uri: localVarPath,
+            json: true,
+            body: (requestObj.polylineData == null) ? null : ObjectSerializer.serialize(requestObj.polylineData, requestObj.polylineData.constructor.name === "Object" ? "PolylineData" : requestObj.polylineData.constructor.name),
+        };
+
+        const response = await invokeApiMethod(requestOptions, this.configuration);
+        const result =  ObjectSerializer.deserialize(response.body, "ModifyResponse");
+        return Promise.resolve({body: result, response});
+    }
 
 }
 /**
@@ -272,6 +547,7 @@ export class OAuthApi {
     }
 
 }
+
 /**
  * Library for communicating with the Aspose.Diagram Cloud API
  */

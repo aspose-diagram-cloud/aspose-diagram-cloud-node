@@ -32,8 +32,8 @@ import * as BaseTest from "./TestBase";
 var fs = require('fs');
 const localPath = "testData/";
 const testFile = "FileUpload.vdx";
-const storageTestFOLDER = "SDKTests/NodeJs"
 const diagramApi = BaseTest.initializeDiagramApi();
+const storageTestFOLDER = "SDKTests/NodeJs"
 //const diagramApi = new api.DiagramApi("","","");
 
 

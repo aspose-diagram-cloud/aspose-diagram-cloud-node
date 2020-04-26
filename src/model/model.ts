@@ -27,47 +27,47 @@ export class AccessTokenResponse {
     /**
      * Attribute type map
      */
-    public static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
         {
             name: "expires",
             baseName: ".expires",
             type: "string",
-        },        
+        },
         {
             name: "accessToken",
             baseName: "access_token",
             type: "string",
-        },        
+        },
         {
             name: "issued",
             baseName: ".issued",
             type: "string",
-        },        
+        },
         {
             name: "clientRefreshTokenLifeTimeInMinutes",
             baseName: "clientRefreshTokenLifeTimeInMinutes",
             type: "string",
-        },        
+        },
         {
             name: "expiresIn",
             baseName: "expires_in",
             type: "number",
-        },        
+        },
         {
             name: "tokenType",
             baseName: "token_type",
             type: "string",
-        },        
+        },
         {
             name: "clientId",
             baseName: "client_id",
             type: "string",
-        },        
+        },
         {
             name: "refreshToken",
             baseName: "refresh_token",
             type: "string",
-        }    ];
+        }];
 
     /**
      * Returns attribute type map
@@ -77,25 +77,25 @@ export class AccessTokenResponse {
     }
 
     public expires: string;
-    
+
     public accessToken: string;
-    
+
     public issued: string;
-    
+
     public clientRefreshTokenLifeTimeInMinutes: string;
-    
+
     public expiresIn: number;
-    
+
     public tokenType: string;
-    
+
     public clientId: string;
-    
+
     public refreshToken: string;
-    
+
     public constructor(init?: Partial<AccessTokenResponse>) {
-        
+
         Object.assign(this, init);
-    }        
+    }
 }
 
 /**
@@ -106,17 +106,17 @@ export class DiscUsage {
     /**
      * Attribute type map
      */
-    public static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
         {
             name: "usedSize",
             baseName: "UsedSize",
             type: "number",
-        },        
+        },
         {
             name: "totalSize",
             baseName: "TotalSize",
             type: "number",
-        }    ];
+        }];
 
     /**
      * Returns attribute type map
@@ -129,16 +129,16 @@ export class DiscUsage {
      * Application used disc space.
      */
     public usedSize: number;
-    
+
     /**
      * Total disc space.
      */
     public totalSize: number;
-    
+
     public constructor(init?: Partial<DiscUsage>) {
-        
+
         Object.assign(this, init);
-    }        
+    }
 }
 
 /**
@@ -149,17 +149,17 @@ export class ErrorDetails {
     /**
      * Attribute type map
      */
-    public static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
         {
             name: "requestId",
             baseName: "RequestId",
             type: "string",
-        },        
+        },
         {
             name: "date",
             baseName: "Date",
             type: "Date",
-        }    ];
+        }];
 
     /**
      * Returns attribute type map
@@ -172,16 +172,16 @@ export class ErrorDetails {
      * The request id
      */
     public requestId: string;
-    
+
     /**
      * Date
      */
     public date: Date;
-    
+
     public constructor(init?: Partial<ErrorDetails>) {
-        
+
         Object.assign(this, init);
-    }        
+    }
 }
 
 /**
@@ -192,12 +192,12 @@ export class FileVersions {
     /**
      * Attribute type map
      */
-    public static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
         {
             name: "value",
             baseName: "Value",
             type: "Array<FileVersion>",
-        }    ];
+        }];
 
     /**
      * Returns attribute type map
@@ -210,11 +210,11 @@ export class FileVersions {
      * File versions FileVersion.
      */
     public value: Array<FileVersion>;
-    
+
     public constructor(init?: Partial<FileVersions>) {
-        
+
         Object.assign(this, init);
-    }        
+    }
 }
 
 /**
@@ -225,12 +225,12 @@ export class FilesList {
     /**
      * Attribute type map
      */
-    public static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
         {
             name: "value",
             baseName: "Value",
             type: "Array<StorageFile>",
-        }    ];
+        }];
 
     /**
      * Returns attribute type map
@@ -243,11 +243,11 @@ export class FilesList {
      * Files and folders contained by folder StorageFile.
      */
     public value: Array<StorageFile>;
-    
+
     public constructor(init?: Partial<FilesList>) {
-        
+
         Object.assign(this, init);
-    }        
+    }
 }
 
 /**
@@ -258,17 +258,17 @@ export class FilesUploadResult {
     /**
      * Attribute type map
      */
-    public static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
         {
             name: "uploaded",
             baseName: "Uploaded",
             type: "Array<string>",
-        },        
+        },
         {
             name: "errors",
             baseName: "Errors",
             type: "Array<Error>",
-        }    ];
+        }];
 
     /**
      * Returns attribute type map
@@ -281,16 +281,16 @@ export class FilesUploadResult {
      * List of uploaded file names
      */
     public uploaded: Array<string>;
-    
+
     /**
      * List of errors.
      */
     public errors: Array<Error>;
-    
+
     public constructor(init?: Partial<FilesUploadResult>) {
-        
+
         Object.assign(this, init);
-    }        
+    }
 }
 
 /**
@@ -301,27 +301,27 @@ export class ModelError {
     /**
      * Attribute type map
      */
-    public static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
         {
             name: "code",
             baseName: "Code",
             type: "string",
-        },        
+        },
         {
             name: "message",
             baseName: "Message",
             type: "string",
-        },        
+        },
         {
             name: "description",
             baseName: "Description",
             type: "string",
-        },        
+        },
         {
             name: "innerError",
             baseName: "InnerError",
             type: "ErrorDetails",
-        }    ];
+        }];
 
     /**
      * Returns attribute type map
@@ -334,26 +334,26 @@ export class ModelError {
      * Code             
      */
     public code: string;
-    
+
     /**
      * Message             
      */
     public message: string;
-    
+
     /**
      * Description             
      */
     public description: string;
-    
+
     /**
      * Inner Error             
      */
     public innerError: ErrorDetails;
-    
+
     public constructor(init?: Partial<ModelError>) {
-        
+
         Object.assign(this, init);
-    }        
+    }
 }
 
 /**
@@ -364,17 +364,17 @@ export class ObjectExist {
     /**
      * Attribute type map
      */
-    public static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
         {
             name: "exists",
             baseName: "Exists",
             type: "boolean",
-        },        
+        },
         {
             name: "isFolder",
             baseName: "IsFolder",
             type: "boolean",
-        }    ];
+        }];
 
     /**
      * Returns attribute type map
@@ -387,16 +387,16 @@ export class ObjectExist {
      * Indicates that the file or folder exists.
      */
     public exists: boolean;
-    
+
     /**
      * True if it is a folder, false if it is a file.
      */
     public isFolder: boolean;
-    
+
     public constructor(init?: Partial<ObjectExist>) {
-        
+
         Object.assign(this, init);
-    }        
+    }
 }
 
 export class PageSize {
@@ -404,12 +404,12 @@ export class PageSize {
     /**
      * Attribute type map
      */
-    public static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
         {
             name: "paperSizeFormat",
             baseName: "PaperSizeFormat",
             type: "PageSize.PaperSizeFormatEnum",
-        }    ];
+        }];
 
     /**
      * Returns attribute type map
@@ -419,11 +419,11 @@ export class PageSize {
     }
 
     public paperSizeFormat: PageSize.PaperSizeFormatEnum;
-    
+
     public constructor(init?: Partial<PageSize>) {
-        
+
         Object.assign(this, init);
-    }        
+    }
 }
 
 // tslint:disable:quotemark
@@ -472,27 +472,27 @@ export class PdfDigitalSignatureDetails {
     /**
      * Attribute type map
      */
-    public static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
         {
             name: "signatureDate",
             baseName: "SignatureDate",
             type: "Date",
-        },        
+        },
         {
             name: "reason",
             baseName: "Reason",
             type: "string",
-        },        
+        },
         {
             name: "location",
             baseName: "Location",
             type: "string",
-        },        
+        },
         {
             name: "hashAlgorithm",
             baseName: "HashAlgorithm",
             type: "PdfDigitalSignatureDetails.HashAlgorithmEnum",
-        }    ];
+        }];
 
     /**
      * Returns attribute type map
@@ -502,17 +502,17 @@ export class PdfDigitalSignatureDetails {
     }
 
     public signatureDate: Date;
-    
+
     public reason: string;
-    
+
     public location: string;
-    
+
     public hashAlgorithm: PdfDigitalSignatureDetails.HashAlgorithmEnum;
-    
+
     public constructor(init?: Partial<PdfDigitalSignatureDetails>) {
-        
+
         Object.assign(this, init);
-    }        
+    }
 }
 
 // tslint:disable:quotemark
@@ -532,27 +532,27 @@ export class PdfEncryptionDetails {
     /**
      * Attribute type map
      */
-    public static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
         {
             name: "permissions",
             baseName: "Permissions",
             type: "PdfEncryptionDetails.PermissionsEnum",
-        },        
+        },
         {
             name: "encryptionAlgorithm",
             baseName: "EncryptionAlgorithm",
             type: "PdfEncryptionDetails.EncryptionAlgorithmEnum",
-        },        
+        },
         {
             name: "userPassword",
             baseName: "UserPassword",
             type: "string",
-        },        
+        },
         {
             name: "ownerPassword",
             baseName: "OwnerPassword",
             type: "string",
-        }    ];
+        }];
 
     /**
      * Returns attribute type map
@@ -562,17 +562,17 @@ export class PdfEncryptionDetails {
     }
 
     public permissions: PdfEncryptionDetails.PermissionsEnum;
-    
+
     public encryptionAlgorithm: PdfEncryptionDetails.EncryptionAlgorithmEnum;
-    
+
     public userPassword: string;
-    
+
     public ownerPassword: string;
-    
+
     public constructor(init?: Partial<PdfEncryptionDetails>) {
-        
+
         Object.assign(this, init);
-    }        
+    }
 }
 
 // tslint:disable:quotemark
@@ -601,22 +601,22 @@ export class PointF {
     /**
      * Attribute type map
      */
-    public static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
         {
             name: "isEmpty",
             baseName: "IsEmpty",
             type: "boolean",
-        },        
+        },
         {
             name: "x",
             baseName: "X",
             type: "number",
-        },        
+        },
         {
             name: "y",
             baseName: "Y",
             type: "number",
-        }    ];
+        }];
 
     /**
      * Returns attribute type map
@@ -626,15 +626,15 @@ export class PointF {
     }
 
     public isEmpty: boolean;
-    
+
     public x: number;
-    
+
     public y: number;
-    
-    public constructor(init?: Partial<PointF>) {
-        
-        Object.assign(this, init);
-    }        
+
+    public constructor(x: number, y: number) {
+        this.x = x;
+        this.y = y;
+    }
 }
 
 export class RectangleF {
@@ -642,62 +642,62 @@ export class RectangleF {
     /**
      * Attribute type map
      */
-    public static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
         {
             name: "location",
             baseName: "Location",
             type: "PointF",
-        },        
+        },
         {
             name: "size",
             baseName: "Size",
             type: "string",
-        },        
+        },
         {
             name: "x",
             baseName: "X",
             type: "number",
-        },        
+        },
         {
             name: "y",
             baseName: "Y",
             type: "number",
-        },        
+        },
         {
             name: "width",
             baseName: "Width",
             type: "number",
-        },        
+        },
         {
             name: "height",
             baseName: "Height",
             type: "number",
-        },        
+        },
         {
             name: "left",
             baseName: "Left",
             type: "number",
-        },        
+        },
         {
             name: "top",
             baseName: "Top",
             type: "number",
-        },        
+        },
         {
             name: "right",
             baseName: "Right",
             type: "number",
-        },        
+        },
         {
             name: "bottom",
             baseName: "Bottom",
             type: "number",
-        },        
+        },
         {
             name: "isEmpty",
             baseName: "IsEmpty",
             type: "boolean",
-        }    ];
+        }];
 
     /**
      * Returns attribute type map
@@ -707,31 +707,31 @@ export class RectangleF {
     }
 
     public location: PointF;
-    
+
     public size: string;
-    
+
     public x: number;
-    
+
     public y: number;
-    
+
     public width: number;
-    
+
     public height: number;
-    
+
     public left: number;
-    
+
     public top: number;
-    
+
     public right: number;
-    
+
     public bottom: number;
-    
+
     public isEmpty: boolean;
-    
+
     public constructor(init?: Partial<RectangleF>) {
-        
+
         Object.assign(this, init);
-    }        
+    }
 }
 
 export class SaaSposeResponse {
@@ -739,7 +739,7 @@ export class SaaSposeResponse {
     /**
      * Attribute type map
      */
-    public static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
     ];
 
     /**
@@ -750,9 +750,9 @@ export class SaaSposeResponse {
     }
 
     public constructor(init?: Partial<SaaSposeResponse>) {
-        
+
         Object.assign(this, init);
-    }        
+    }
 }
 
 export class SaveOptionsModel {
@@ -760,17 +760,17 @@ export class SaveOptionsModel {
     /**
      * Attribute type map
      */
-    public static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
         {
             name: "saveFormat",
             baseName: "SaveFormat",
             type: "SaveOptionsModel.SaveFormatEnum",
-        },        
+        },
         {
             name: "defaultFont",
             baseName: "DefaultFont",
             type: "string",
-        }    ];
+        }];
 
     /**
      * Returns attribute type map
@@ -780,13 +780,13 @@ export class SaveOptionsModel {
     }
 
     public saveFormat: SaveOptionsModel.SaveFormatEnum;
-    
+
     public defaultFont: string;
-    
+
     public constructor(init?: Partial<SaveOptionsModel>) {
-        
+
         Object.assign(this, init);
-    }        
+    }
 }
 
 // tslint:disable:quotemark
@@ -822,22 +822,22 @@ export class SaveOptionsRequest {
     /**
      * Attribute type map
      */
-    public static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
         {
             name: "fileName",
             baseName: "FileName",
             type: "string",
-        },        
+        },
         {
             name: "folder",
             baseName: "Folder",
             type: "string",
-        },        
+        },
         {
             name: "saveOptions",
             baseName: "SaveOptions",
             type: "SaveOptionsModel",
-        }    ];
+        }];
 
     /**
      * Returns attribute type map
@@ -847,15 +847,15 @@ export class SaveOptionsRequest {
     }
 
     public fileName: string;
-    
+
     public folder: string;
-    
+
     public saveOptions: SaveOptionsModel;
-    
+
     public constructor(init?: Partial<SaveOptionsRequest>) {
-        
+
         Object.assign(this, init);
-    }        
+    }
 }
 
 /**
@@ -866,12 +866,12 @@ export class StorageExist {
     /**
      * Attribute type map
      */
-    public static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
         {
             name: "exists",
             baseName: "Exists",
             type: "boolean",
-        }    ];
+        }];
 
     /**
      * Returns attribute type map
@@ -884,11 +884,11 @@ export class StorageExist {
      * Shows that the storage exists.             
      */
     public exists: boolean;
-    
+
     public constructor(init?: Partial<StorageExist>) {
-        
+
         Object.assign(this, init);
-    }        
+    }
 }
 
 /**
@@ -899,32 +899,32 @@ export class StorageFile {
     /**
      * Attribute type map
      */
-    public static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
         {
             name: "name",
             baseName: "Name",
             type: "string",
-        },        
+        },
         {
             name: "isFolder",
             baseName: "IsFolder",
             type: "boolean",
-        },        
+        },
         {
             name: "modifiedDate",
             baseName: "ModifiedDate",
             type: "Date",
-        },        
+        },
         {
             name: "size",
             baseName: "Size",
             type: "number",
-        },        
+        },
         {
             name: "path",
             baseName: "Path",
             type: "string",
-        }    ];
+        }];
 
     /**
      * Returns attribute type map
@@ -937,31 +937,31 @@ export class StorageFile {
      * File or folder name.
      */
     public name: string;
-    
+
     /**
      * True if it is a folder.
      */
     public isFolder: boolean;
-    
+
     /**
      * File or folder last modified DateTime.
      */
     public modifiedDate: Date;
-    
+
     /**
      * File or folder size.
      */
     public size: number;
-    
+
     /**
      * File or folder path.
      */
     public path: string;
-    
+
     public constructor(init?: Partial<StorageFile>) {
-        
+
         Object.assign(this, init);
-    }        
+    }
 }
 
 export class CreateNewResponse extends SaaSposeResponse {
@@ -969,12 +969,12 @@ export class CreateNewResponse extends SaaSposeResponse {
     /**
      * Attribute type map
      */
-    public static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
         {
             name: "created",
             baseName: "Created",
             type: "string",
-        }    ];
+        }];
 
     /**
      * Returns attribute type map
@@ -984,11 +984,11 @@ export class CreateNewResponse extends SaaSposeResponse {
     }
 
     public created: string;
-    
+
     public constructor(init?: Partial<CreateNewResponse>) {
         super(init);
         Object.assign(this, init);
-    }        
+    }
 }
 
 export class DiagramSaveOptions extends SaveOptionsModel {
@@ -996,12 +996,12 @@ export class DiagramSaveOptions extends SaveOptionsModel {
     /**
      * Attribute type map
      */
-    public static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
         {
             name: "autoFitPageToDrawingContent",
             baseName: "AutoFitPageToDrawingContent",
             type: "boolean",
-        }    ];
+        }];
 
     /**
      * Returns attribute type map
@@ -1011,11 +1011,11 @@ export class DiagramSaveOptions extends SaveOptionsModel {
     }
 
     public autoFitPageToDrawingContent: boolean;
-    
+
     public constructor(init?: Partial<DiagramSaveOptions>) {
         super(init);
         Object.assign(this, init);
-    }        
+    }
 }
 
 // tslint:disable:quotemark
@@ -1031,17 +1031,17 @@ export class FileVersion extends StorageFile {
     /**
      * Attribute type map
      */
-    public static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
         {
             name: "versionId",
             baseName: "VersionId",
             type: "string",
-        },        
+        },
         {
             name: "isLatest",
             baseName: "IsLatest",
             type: "boolean",
-        }    ];
+        }];
 
     /**
      * Returns attribute type map
@@ -1054,16 +1054,16 @@ export class FileVersion extends StorageFile {
      * File Version ID.
      */
     public versionId: string;
-    
+
     /**
      * Specifies whether the file is (true) or is not (false) the latest version of an file.
      */
     public isLatest: boolean;
-    
+
     public constructor(init?: Partial<FileVersion>) {
         super(init);
         Object.assign(this, init);
-    }        
+    }
 }
 
 export class ModifyResponse extends SaaSposeResponse {
@@ -1071,17 +1071,17 @@ export class ModifyResponse extends SaaSposeResponse {
     /**
      * Attribute type map
      */
-    public static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
         {
             name: "isSuccess",
             baseName: "IsSuccess",
             type: "boolean",
-        },        
+        },
         {
             name: "message",
             baseName: "Message",
             type: "string",
-        }    ];
+        }];
 
     /**
      * Returns attribute type map
@@ -1091,13 +1091,13 @@ export class ModifyResponse extends SaaSposeResponse {
     }
 
     public isSuccess: boolean;
-    
+
     public message: string;
-    
+
     public constructor(init?: Partial<ModifyResponse>) {
         super(init);
         Object.assign(this, init);
-    }        
+    }
 }
 
 export class RenderingSaveOptions extends SaveOptionsModel {
@@ -1105,27 +1105,27 @@ export class RenderingSaveOptions extends SaveOptionsModel {
     /**
      * Attribute type map
      */
-    public static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
         {
             name: "area",
             baseName: "Area",
             type: "RectangleF",
-        },        
+        },
         {
             name: "exportGuideShapes",
             baseName: "ExportGuideShapes",
             type: "boolean",
-        },        
+        },
         {
             name: "pageSize",
             baseName: "PageSize",
             type: "PageSize",
-        },        
+        },
         {
             name: "isExportComments",
             baseName: "IsExportComments",
             type: "boolean",
-        }    ];
+        }];
 
     /**
      * Returns attribute type map
@@ -1135,17 +1135,17 @@ export class RenderingSaveOptions extends SaveOptionsModel {
     }
 
     public area: RectangleF;
-    
+
     public exportGuideShapes: boolean;
-    
+
     public pageSize: PageSize;
-    
+
     public isExportComments: boolean;
-    
+
     public constructor(init?: Partial<RenderingSaveOptions>) {
         super(init);
         Object.assign(this, init);
-    }        
+    }
 }
 
 // tslint:disable:quotemark
@@ -1158,27 +1158,27 @@ export class SWFSaveOptions extends SaveOptionsModel {
     /**
      * Attribute type map
      */
-    public static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
         {
             name: "pageCount",
             baseName: "PageCount",
             type: "number",
-        },        
+        },
         {
             name: "viewerIncluded",
             baseName: "ViewerIncluded",
             type: "boolean",
-        },        
+        },
         {
             name: "pageIndex",
             baseName: "PageIndex",
             type: "number",
-        },        
+        },
         {
             name: "saveForegroundPagesOnly",
             baseName: "SaveForegroundPagesOnly",
             type: "boolean",
-        }    ];
+        }];
 
     /**
      * Returns attribute type map
@@ -1188,17 +1188,17 @@ export class SWFSaveOptions extends SaveOptionsModel {
     }
 
     public pageCount: number;
-    
+
     public viewerIncluded: boolean;
-    
+
     public pageIndex: number;
-    
+
     public saveForegroundPagesOnly: boolean;
-    
+
     public constructor(init?: Partial<SWFSaveOptions>) {
         super(init);
         Object.assign(this, init);
-    }        
+    }
 }
 
 // tslint:disable:quotemark
@@ -1211,22 +1211,22 @@ export class SaveAsResponse extends SaaSposeResponse {
     /**
      * Attribute type map
      */
-    public static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
         {
             name: "sourceFile",
             baseName: "SourceFile",
             type: "string",
-        },        
+        },
         {
             name: "savedFile",
             baseName: "SavedFile",
             type: "string",
-        },        
+        },
         {
             name: "additionals",
             baseName: "Additionals",
             type: "Array<string>",
-        }    ];
+        }];
 
     /**
      * Returns attribute type map
@@ -1236,15 +1236,15 @@ export class SaveAsResponse extends SaaSposeResponse {
     }
 
     public sourceFile: string;
-    
+
     public savedFile: string;
-    
+
     public additionals: Array<string>;
-    
+
     public constructor(init?: Partial<SaveAsResponse>) {
         super(init);
         Object.assign(this, init);
-    }        
+    }
 }
 
 export class UploadResponse extends SaaSposeResponse {
@@ -1252,12 +1252,12 @@ export class UploadResponse extends SaaSposeResponse {
     /**
      * Attribute type map
      */
-    public static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
         {
             name: "uploaded",
             baseName: "Uploaded",
             type: "string",
-        }    ];
+        }];
 
     /**
      * Returns attribute type map
@@ -1267,11 +1267,11 @@ export class UploadResponse extends SaaSposeResponse {
     }
 
     public uploaded: string;
-    
+
     public constructor(init?: Partial<UploadResponse>) {
         super(init);
         Object.assign(this, init);
-    }        
+    }
 }
 
 export class XAMLSaveOptions extends SaveOptionsModel {
@@ -1279,22 +1279,22 @@ export class XAMLSaveOptions extends SaveOptionsModel {
     /**
      * Attribute type map
      */
-    public static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
         {
             name: "pageCount",
             baseName: "PageCount",
             type: "number",
-        },        
+        },
         {
             name: "pageIndex",
             baseName: "PageIndex",
             type: "number",
-        },        
+        },
         {
             name: "saveForegroundPagesOnly",
             baseName: "SaveForegroundPagesOnly",
             type: "boolean",
-        }    ];
+        }];
 
     /**
      * Returns attribute type map
@@ -1304,15 +1304,15 @@ export class XAMLSaveOptions extends SaveOptionsModel {
     }
 
     public pageCount: number;
-    
+
     public pageIndex: number;
-    
+
     public saveForegroundPagesOnly: boolean;
-    
+
     public constructor(init?: Partial<XAMLSaveOptions>) {
         super(init);
         Object.assign(this, init);
-    }        
+    }
 }
 
 // tslint:disable:quotemark
@@ -1325,27 +1325,27 @@ export class XPSSaveOptions extends SaveOptionsModel {
     /**
      * Attribute type map
      */
-    public static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
         {
             name: "pageCount",
             baseName: "PageCount",
             type: "number",
-        },        
+        },
         {
             name: "exportHiddenPage",
             baseName: "ExportHiddenPage",
             type: "boolean",
-        },        
+        },
         {
             name: "pageIndex",
             baseName: "PageIndex",
             type: "number",
-        },        
+        },
         {
             name: "saveForegroundPagesOnly",
             baseName: "SaveForegroundPagesOnly",
             type: "boolean",
-        }    ];
+        }];
 
     /**
      * Returns attribute type map
@@ -1355,17 +1355,17 @@ export class XPSSaveOptions extends SaveOptionsModel {
     }
 
     public pageCount: number;
-    
+
     public exportHiddenPage: boolean;
-    
+
     public pageIndex: number;
-    
+
     public saveForegroundPagesOnly: boolean;
-    
+
     public constructor(init?: Partial<XPSSaveOptions>) {
         super(init);
         Object.assign(this, init);
-    }        
+    }
 }
 
 // tslint:disable:quotemark
@@ -1378,37 +1378,37 @@ export class HTMLSaveOptions extends RenderingSaveOptions {
     /**
      * Attribute type map
      */
-    public static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
         {
             name: "pageCount",
             baseName: "PageCount",
             type: "number",
-        },        
+        },
         {
             name: "saveToolBar",
             baseName: "SaveToolBar",
             type: "boolean",
-        },        
+        },
         {
             name: "exportHiddenPage",
             baseName: "ExportHiddenPage",
             type: "boolean",
-        },        
+        },
         {
             name: "pageIndex",
             baseName: "PageIndex",
             type: "number",
-        },        
+        },
         {
             name: "saveForegroundPagesOnly",
             baseName: "SaveForegroundPagesOnly",
             type: "boolean",
-        },        
+        },
         {
             name: "title",
             baseName: "Title",
             type: "string",
-        }    ];
+        }];
 
     /**
      * Returns attribute type map
@@ -1418,21 +1418,21 @@ export class HTMLSaveOptions extends RenderingSaveOptions {
     }
 
     public pageCount: number;
-    
+
     public saveToolBar: boolean;
-    
+
     public exportHiddenPage: boolean;
-    
+
     public pageIndex: number;
-    
+
     public saveForegroundPagesOnly: boolean;
-    
+
     public title: string;
-    
+
     public constructor(init?: Partial<HTMLSaveOptions>) {
         super(init);
         Object.assign(this, init);
-    }        
+    }
 }
 
 // tslint:disable:quotemark
@@ -1445,87 +1445,87 @@ export class ImageSaveOptions extends RenderingSaveOptions {
     /**
      * Attribute type map
      */
-    public static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
         {
             name: "imageBrightness",
             baseName: "ImageBrightness",
             type: "number",
-        },        
+        },
         {
             name: "imageContrast",
             baseName: "ImageContrast",
             type: "number",
-        },        
+        },
         {
             name: "jpegQuality",
             baseName: "JpegQuality",
             type: "number",
-        },        
+        },
         {
             name: "pageCount",
             baseName: "PageCount",
             type: "number",
-        },        
+        },
         {
             name: "resolution",
             baseName: "Resolution",
             type: "number",
-        },        
+        },
         {
             name: "scale",
             baseName: "Scale",
             type: "number",
-        },        
+        },
         {
             name: "tiffCompression",
             baseName: "TiffCompression",
             type: "ImageSaveOptions.TiffCompressionEnum",
-        },        
+        },
         {
             name: "exportHiddenPage",
             baseName: "ExportHiddenPage",
             type: "boolean",
-        },        
+        },
         {
             name: "imageColorMode",
             baseName: "ImageColorMode",
             type: "ImageSaveOptions.ImageColorModeEnum",
-        },        
+        },
         {
             name: "pageIndex",
             baseName: "PageIndex",
             type: "number",
-        },        
+        },
         {
             name: "saveForegroundPagesOnly",
             baseName: "SaveForegroundPagesOnly",
             type: "boolean",
-        },        
+        },
         {
             name: "sameAsPdfConversionArea",
             baseName: "SameAsPdfConversionArea",
             type: "boolean",
-        },        
+        },
         {
             name: "pixelOffsetMode",
             baseName: "PixelOffsetMode",
             type: "ImageSaveOptions.PixelOffsetModeEnum",
-        },        
+        },
         {
             name: "smoothingMode",
             baseName: "SmoothingMode",
             type: "ImageSaveOptions.SmoothingModeEnum",
-        },        
+        },
         {
             name: "compositingQuality",
             baseName: "CompositingQuality",
             type: "ImageSaveOptions.CompositingQualityEnum",
-        },        
+        },
         {
             name: "interpolationMode",
             baseName: "InterpolationMode",
             type: "ImageSaveOptions.InterpolationModeEnum",
-        }    ];
+        }];
 
     /**
      * Returns attribute type map
@@ -1535,41 +1535,41 @@ export class ImageSaveOptions extends RenderingSaveOptions {
     }
 
     public imageBrightness: number;
-    
+
     public imageContrast: number;
-    
+
     public jpegQuality: number;
-    
+
     public pageCount: number;
-    
+
     public resolution: number;
-    
+
     public scale: number;
-    
+
     public tiffCompression: ImageSaveOptions.TiffCompressionEnum;
-    
+
     public exportHiddenPage: boolean;
-    
+
     public imageColorMode: ImageSaveOptions.ImageColorModeEnum;
-    
+
     public pageIndex: number;
-    
+
     public saveForegroundPagesOnly: boolean;
-    
+
     public sameAsPdfConversionArea: boolean;
-    
+
     public pixelOffsetMode: ImageSaveOptions.PixelOffsetModeEnum;
-    
+
     public smoothingMode: ImageSaveOptions.SmoothingModeEnum;
-    
+
     public compositingQuality: ImageSaveOptions.CompositingQualityEnum;
-    
+
     public interpolationMode: ImageSaveOptions.InterpolationModeEnum;
-    
+
     public constructor(init?: Partial<ImageSaveOptions>) {
         super(init);
         Object.assign(this, init);
-    }        
+    }
 }
 
 // tslint:disable:quotemark
@@ -1629,67 +1629,67 @@ export class PdfSaveOptions extends RenderingSaveOptions {
     /**
      * Attribute type map
      */
-    public static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
         {
             name: "horizontalResolution",
             baseName: "HorizontalResolution",
             type: "number",
-        },        
+        },
         {
             name: "verticalResolution",
             baseName: "VerticalResolution",
             type: "number",
-        },        
+        },
         {
             name: "pageCount",
             baseName: "PageCount",
             type: "number",
-        },        
+        },
         {
             name: "jpegQuality",
             baseName: "JpegQuality",
             type: "number",
-        },        
+        },
         {
             name: "exportHiddenPage",
             baseName: "ExportHiddenPage",
             type: "boolean",
-        },        
+        },
         {
             name: "pageIndex",
             baseName: "PageIndex",
             type: "number",
-        },        
+        },
         {
             name: "saveForegroundPagesOnly",
             baseName: "SaveForegroundPagesOnly",
             type: "boolean",
-        },        
+        },
         {
             name: "compliance",
             baseName: "Compliance",
             type: "PdfSaveOptions.ComplianceEnum",
-        },        
+        },
         {
             name: "encryptionDetails",
             baseName: "EncryptionDetails",
             type: "PdfEncryptionDetails",
-        },        
+        },
         {
             name: "textCompression",
             baseName: "TextCompression",
             type: "PdfSaveOptions.TextCompressionEnum",
-        },        
+        },
         {
             name: "splitMultiPages",
             baseName: "SplitMultiPages",
             type: "boolean",
-        },        
+        },
         {
             name: "digitalSignatureDetails",
             baseName: "DigitalSignatureDetails",
             type: "PdfDigitalSignatureDetails",
-        }    ];
+        }];
 
     /**
      * Returns attribute type map
@@ -1699,33 +1699,33 @@ export class PdfSaveOptions extends RenderingSaveOptions {
     }
 
     public horizontalResolution: number;
-    
+
     public verticalResolution: number;
-    
+
     public pageCount: number;
-    
+
     public jpegQuality: number;
-    
+
     public exportHiddenPage: boolean;
-    
+
     public pageIndex: number;
-    
+
     public saveForegroundPagesOnly: boolean;
-    
+
     public compliance: PdfSaveOptions.ComplianceEnum;
-    
+
     public encryptionDetails: PdfEncryptionDetails;
-    
+
     public textCompression: PdfSaveOptions.TextCompressionEnum;
-    
+
     public splitMultiPages: boolean;
-    
+
     public digitalSignatureDetails: PdfDigitalSignatureDetails;
-    
+
     public constructor(init?: Partial<PdfSaveOptions>) {
         super(init);
         Object.assign(this, init);
-    }        
+    }
 }
 
 // tslint:disable:quotemark
@@ -1747,32 +1747,32 @@ export class SVGSaveOptions extends RenderingSaveOptions {
     /**
      * Attribute type map
      */
-    public static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
         {
             name: "exportHiddenPage",
             baseName: "ExportHiddenPage",
             type: "boolean",
-        },        
+        },
         {
             name: "quality",
             baseName: "Quality",
             type: "number",
-        },        
+        },
         {
             name: "pageIndex",
             baseName: "PageIndex",
             type: "number",
-        },        
+        },
         {
             name: "sVGFitToViewPort",
             baseName: "SVGFitToViewPort",
             type: "boolean",
-        },        
+        },
         {
             name: "exportElementAsRectTag",
             baseName: "ExportElementAsRectTag",
             type: "boolean",
-        }    ];
+        }];
 
     /**
      * Returns attribute type map
@@ -1782,19 +1782,19 @@ export class SVGSaveOptions extends RenderingSaveOptions {
     }
 
     public exportHiddenPage: boolean;
-    
+
     public quality: number;
-    
+
     public pageIndex: number;
-    
+
     public sVGFitToViewPort: boolean;
-    
+
     public exportElementAsRectTag: boolean;
-    
+
     public constructor(init?: Partial<SVGSaveOptions>) {
         super(init);
         Object.assign(this, init);
-    }        
+    }
 }
 
 // tslint:disable:quotemark
@@ -1819,41 +1819,41 @@ const enumsMap = {
 };
 
 const typeMap = {
-            AccessTokenResponse,
-            DiscUsage,
-            ErrorDetails,
-            FileVersions,
-            FilesList,
-            FilesUploadResult,
-            ModelError,
-            ObjectExist,
-            PageSize,
-            PdfDigitalSignatureDetails,
-            PdfEncryptionDetails,
-            PointF,
-            RectangleF,
-            SaaSposeResponse,
-            SaveOptionsModel,
-            SaveOptionsRequest,
-            StorageExist,
-            StorageFile,
-            CreateNewResponse,
-            DiagramSaveOptions,
-            FileVersion,
-            ModifyResponse,
-            RenderingSaveOptions,
-            SWFSaveOptions,
-            SaveAsResponse,
-            UploadResponse,
-            XAMLSaveOptions,
-            XPSSaveOptions,
-            HTMLSaveOptions,
-            ImageSaveOptions,
-            PdfSaveOptions,
-            SVGSaveOptions,
+    AccessTokenResponse,
+    DiscUsage,
+    ErrorDetails,
+    FileVersions,
+    FilesList,
+    FilesUploadResult,
+    ModelError,
+    ObjectExist,
+    PageSize,
+    PdfDigitalSignatureDetails,
+    PdfEncryptionDetails,
+    PointF,
+    RectangleF,
+    SaaSposeResponse,
+    SaveOptionsModel,
+    SaveOptionsRequest,
+    StorageExist,
+    StorageFile,
+    CreateNewResponse,
+    DiagramSaveOptions,
+    FileVersion,
+    ModifyResponse,
+    RenderingSaveOptions,
+    SWFSaveOptions,
+    SaveAsResponse,
+    UploadResponse,
+    XAMLSaveOptions,
+    XPSSaveOptions,
+    HTMLSaveOptions,
+    ImageSaveOptions,
+    PdfSaveOptions,
+    SVGSaveOptions,
 };
 
-export {enumsMap, typeMap};
+export { enumsMap, typeMap };
 
 /**
  * Request model for ConvertDocument operation.
@@ -1873,10 +1873,10 @@ export class ConvertDocumentRequest {
      * Source document name.
      */
     public sourceFilename: string;
-    
-    public constructor(init?: Partial<ConvertDocumentRequest>) {        
+
+    public constructor(init?: Partial<ConvertDocumentRequest>) {
         Object.assign(this, init);
-    } 
+    }
 }
 
 /**
@@ -1897,10 +1897,10 @@ export class DownloadFileWithFormatRequest {
      * Original document folder.
      */
     public folder: string;
-    
-    public constructor(init?: Partial<DownloadFileWithFormatRequest>) {        
+
+    public constructor(init?: Partial<DownloadFileWithFormatRequest>) {
         Object.assign(this, init);
-    } 
+    }
 }
 
 /**
@@ -1921,10 +1921,10 @@ export class CreateNewRequest {
      * If true overwrite the same name file.The default value is false 
      */
     public isOverwrite: boolean;
-    
-    public constructor(init?: Partial<CreateNewRequest>) {        
+
+    public constructor(init?: Partial<CreateNewRequest>) {
         Object.assign(this, init);
-    } 
+    }
 }
 
 /**
@@ -1950,10 +1950,10 @@ export class SaveAsRequest {
      * If true overwrite the same name file.The default value is false 
      */
     public isOverwrite: boolean;
-    
-    public constructor(init?: Partial<SaveAsRequest>) {        
+
+    public constructor(init?: Partial<SaveAsRequest>) {
         Object.assign(this, init);
-    } 
+    }
 }
 
 /**
@@ -1974,10 +1974,10 @@ export class OAuth_PostRequest {
      * App Key
      */
     public clientSecret: string;
-    
-    public constructor(init?: Partial<OAuth_PostRequest>) {        
+
+    public constructor(init?: Partial<OAuth_PostRequest>) {
         Object.assign(this, init);
-    } 
+    }
 }
 
 /**
@@ -1988,10 +1988,10 @@ export class GetDiscUsageRequest {
      * Storage name
      */
     public storageName: string;
-    
-    public constructor(init?: Partial<GetDiscUsageRequest>) {        
+
+    public constructor(init?: Partial<GetDiscUsageRequest>) {
         Object.assign(this, init);
-    } 
+    }
 }
 
 /**
@@ -2012,10 +2012,10 @@ export class ObjectExistsRequest {
      * File version ID
      */
     public versionId: string;
-    
-    public constructor(init?: Partial<ObjectExistsRequest>) {        
+
+    public constructor(init?: Partial<ObjectExistsRequest>) {
         Object.assign(this, init);
-    } 
+    }
 }
 
 /**
@@ -2046,10 +2046,10 @@ export class CopyFileRequest {
      * File version ID to copy
      */
     public versionId: string;
-    
-    public constructor(init?: Partial<CopyFileRequest>) {        
+
+    public constructor(init?: Partial<CopyFileRequest>) {
         Object.assign(this, init);
-    } 
+    }
 }
 
 /**
@@ -2080,10 +2080,10 @@ export class MoveFileRequest {
      * File version ID to move
      */
     public versionId: string;
-    
-    public constructor(init?: Partial<MoveFileRequest>) {        
+
+    public constructor(init?: Partial<MoveFileRequest>) {
         Object.assign(this, init);
-    } 
+    }
 }
 
 /**
@@ -2104,10 +2104,10 @@ export class DeleteFileRequest {
      * File version ID to delete
      */
     public versionId: string;
-    
-    public constructor(init?: Partial<DeleteFileRequest>) {        
+
+    public constructor(init?: Partial<DeleteFileRequest>) {
         Object.assign(this, init);
-    } 
+    }
 }
 
 /**
@@ -2128,10 +2128,10 @@ export class DownloadFileRequest {
      * File version ID to download
      */
     public versionId: string;
-    
-    public constructor(init?: Partial<DownloadFileRequest>) {        
+
+    public constructor(init?: Partial<DownloadFileRequest>) {
         Object.assign(this, init);
-    } 
+    }
 }
 
 /**
@@ -2152,10 +2152,10 @@ export class UploadFileRequest {
      * Storage name
      */
     public storageName: string;
-    
-    public constructor(init?: Partial<UploadFileRequest>) {        
+
+    public constructor(init?: Partial<UploadFileRequest>) {
         Object.assign(this, init);
-    } 
+    }
 }
 
 /**
@@ -2181,10 +2181,10 @@ export class CopyFolderRequest {
      * Destination storage name
      */
     public destStorageName: string;
-    
-    public constructor(init?: Partial<CopyFolderRequest>) {        
+
+    public constructor(init?: Partial<CopyFolderRequest>) {
         Object.assign(this, init);
-    } 
+    }
 }
 
 /**
@@ -2210,10 +2210,10 @@ export class MoveFolderRequest {
      * Destination storage name
      */
     public destStorageName: string;
-    
-    public constructor(init?: Partial<MoveFolderRequest>) {        
+
+    public constructor(init?: Partial<MoveFolderRequest>) {
         Object.assign(this, init);
-    } 
+    }
 }
 
 /**
@@ -2234,10 +2234,10 @@ export class DeleteFolderRequest {
      * Enable to delete folders, subfolders and files
      */
     public recursive: boolean;
-    
-    public constructor(init?: Partial<DeleteFolderRequest>) {        
+
+    public constructor(init?: Partial<DeleteFolderRequest>) {
         Object.assign(this, init);
-    } 
+    }
 }
 
 /**
@@ -2253,10 +2253,10 @@ export class GetFilesListRequest {
      * Storage name
      */
     public storageName: string;
-    
-    public constructor(init?: Partial<GetFilesListRequest>) {        
+
+    public constructor(init?: Partial<GetFilesListRequest>) {
         Object.assign(this, init);
-    } 
+    }
 }
 
 /**
@@ -2272,10 +2272,10 @@ export class CreateFolderRequest {
      * Storage name
      */
     public storageName: string;
-    
-    public constructor(init?: Partial<CreateFolderRequest>) {        
+
+    public constructor(init?: Partial<CreateFolderRequest>) {
         Object.assign(this, init);
-    } 
+    }
 }
 
 /**
@@ -2286,10 +2286,10 @@ export class StorageExistsRequest {
      * Storage name
      */
     public storageName: string;
-    
-    public constructor(init?: Partial<StorageExistsRequest>) {        
+
+    public constructor(init?: Partial<StorageExistsRequest>) {
         Object.assign(this, init);
-    } 
+    }
 }
 
 /**
@@ -2305,8 +2305,614 @@ export class GetFileVersionsRequest {
      * Storage name
      */
     public storageName: string;
-    
-    public constructor(init?: Partial<GetFileVersionsRequest>) {        
+
+    public constructor(init?: Partial<GetFileVersionsRequest>) {
         Object.assign(this, init);
-    } 
+    }
+}
+
+/**
+ * Request model for PutNewPage operation.
+ */
+export class PutNewPageRequest {
+    /**
+     * Document name.
+     */
+    public name: string;
+
+    /**
+     * New page name.
+     */
+    public pageName: string;
+
+    /**
+     * Document folder.
+     */
+    public folder: string;
+
+    public constructor(init?: Partial<PutNewPageRequest>) {
+        Object.assign(this, init);
+    }
+}
+
+/**
+ * Request model for GetPages operation.
+ */
+export class GetPagesRequest {
+    /**
+     * Document name.
+     */
+    public name: string;
+
+    /**
+     * Document folder.
+     */
+    public folder: string;
+
+    public constructor(init?: Partial<GetPagesRequest>) {
+        Object.assign(this, init);
+    }
+}
+
+/**
+ * Request model for DeletePage operation.
+ */
+export class DeletePageRequest {
+    /**
+     * Document name.
+     */
+    public name: string;
+
+    /**
+     * The page name for delete.
+     */
+    public pageName: string;
+
+    /**
+     * Document folder.
+     */
+    public folder: string;
+
+    public constructor(init?: Partial<DeletePageRequest>) {
+        Object.assign(this, init);
+    }
+}
+
+/**
+ * Request model for PostPageSetup operation.
+ */
+export class PostPageSetupRequest {
+    /**
+     * Document name.
+     */
+    public name: string;
+
+    /**
+     * The page name for setting.
+     */
+    public pageName: string;
+
+    /**
+     * Page setting info.
+     */
+    public pageSetting: PageSetting;
+
+    /**
+     * Document folder.
+     */
+    public folder: string;
+
+    public constructor(init?: Partial<PostPageSetupRequest>) {
+        Object.assign(this, init);
+    }
+}
+
+
+export class ApiResponseOfListOfPageData extends SaaSposeResponse {
+
+    /**
+     * Attribute type map
+     */
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
+        {
+            name: "model",
+            baseName: "Model",
+            type: "Array<PageData>",
+        }];
+
+    /**
+     * Returns attribute type map
+     */
+    public static getAttributeTypeMap() {
+        return super.getAttributeTypeMap().concat(ApiResponseOfListOfPageData.attributeTypeMap);
+    }
+
+    public model: Array<PageData>;
+
+    public constructor(init?: Partial<ApiResponseOfListOfPageData>) {
+        super(init);
+        Object.assign(this, init);
+    }
+}
+
+/**
+ * Shape style setting
+ */
+export class ShapeStyleData {
+
+    /**
+     * Attribute type map
+     */
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
+        {
+            name: "backGroundColor",
+            baseName: "BackGroundColor",
+            type: "string",
+        }];
+
+    /**
+     * Returns attribute type map
+     */
+    public static getAttributeTypeMap() {
+        return ShapeStyleData.attributeTypeMap;
+    }
+
+    /**
+     * the background color of shape,like '#000000'
+     */
+    public backGroundColor: string;
+
+    public constructor(init?: Partial<ShapeStyleData>) {
+
+        Object.assign(this, init);
+    }
+}
+
+/**
+ * Text style
+ */
+export class TextStyleData {
+
+    /**
+     * Attribute type map
+     */
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
+        {
+            name: "color",
+            baseName: "Color",
+            type: "string",
+        },
+        {
+            name: "style",
+            baseName: "Style",
+            type: "TextStyleData.StyleEnum",
+        },
+        {
+            name: "fontName",
+            baseName: "FontName",
+            type: "string",
+        },
+        {
+            name: "fontSize",
+            baseName: "FontSize",
+            type: "number",
+        }];
+
+    /**
+     * Returns attribute type map
+     */
+    public static getAttributeTypeMap() {
+        return TextStyleData.attributeTypeMap;
+    }
+
+    public color: string;
+
+    public style: TextStyleData.StyleEnum;
+
+    public fontName: string;
+
+    public fontSize: number;
+
+    public constructor(init?: Partial<TextStyleData>) {
+
+        Object.assign(this, init);
+    }
+}
+
+// tslint:disable:quotemark
+// tslint:disable-next-line:no-namespace
+export namespace TextStyleData {
+    export enum StyleEnum {
+        Bold = 'Bold' as any,
+        Italic = 'Italic' as any,
+        Underline = 'Underline' as any,
+        SmallCaps = 'SmallCaps' as any,
+        Undefined = 'Undefined' as any,
+    }
+}
+
+export class DrawShapeData {
+
+    /**
+     * Attribute type map
+     */
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
+        {
+            name: "pinX",
+            baseName: "PinX",
+            type: "number",
+        },
+        {
+            name: "pinY",
+            baseName: "PinY",
+            type: "number",
+        },
+        {
+            name: "width",
+            baseName: "Width",
+            type: "number",
+        },
+        {
+            name: "height",
+            baseName: "Height",
+            type: "number",
+        },
+        {
+            name: "shapeStyleData",
+            baseName: "ShapeStyleData",
+            type: "ShapeStyleData",
+        },
+        {
+            name: "text",
+            baseName: "Text",
+            type: "string",
+        },
+        {
+            name: "textStyleData",
+            baseName: "TextStyleData",
+            type: "TextStyleData",
+        }];
+
+    /**
+     * Returns attribute type map
+     */
+    public static getAttributeTypeMap() {
+        return DrawShapeData.attributeTypeMap;
+    }
+
+    public pinX: number;
+
+    public pinY: number;
+
+    public width: number;
+
+    public height: number;
+
+    public shapeStyleData: ShapeStyleData;
+
+    public text: string;
+
+    public textStyleData: TextStyleData;
+
+    public constructor(init?: Partial<DrawShapeData>) {
+
+        Object.assign(this, init);
+    }
+}
+
+export class EllipseData extends DrawShapeData {
+
+    /**
+     * Attribute type map
+     */
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
+    ];
+
+    /**
+     * Returns attribute type map
+     */
+    public static getAttributeTypeMap() {
+        return super.getAttributeTypeMap().concat(EllipseData.attributeTypeMap);
+    }
+
+    public constructor(init?: Partial<EllipseData>) {
+        super(init);
+        Object.assign(this, init);
+    }
+}
+
+export class LineData extends DrawShapeData {
+
+    /**
+     * Attribute type map
+     */
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
+        {
+            name: "points",
+            baseName: "Points",
+            type: "Array<PointF>",
+        }];
+
+    /**
+     * Returns attribute type map
+     */
+    public static getAttributeTypeMap() {
+        return super.getAttributeTypeMap().concat(LineData.attributeTypeMap);
+    }
+
+    public points: Array<PointF>;
+
+    public constructor(init?: Partial<LineData>) {
+        super(init);
+        Object.assign(this, init);
+    }
+}
+
+export class PolylineData extends DrawShapeData {
+
+    /**
+     * Attribute type map
+     */
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
+        {
+            name: "points",
+            baseName: "Points",
+            type: "Array<PointF>",
+        }];
+
+    /**
+     * Returns attribute type map
+     */
+    public static getAttributeTypeMap() {
+        return super.getAttributeTypeMap().concat(PolylineData.attributeTypeMap);
+    }
+
+    public points: Array<PointF>;
+
+    public constructor(init?: Partial<PolylineData>) {
+        super(init);
+        Object.assign(this, init);
+    }
+}
+
+/**
+ * Request model for PutDrawEllipse operation.
+ */
+export class PutDrawEllipseRequest {
+    /**
+     * Document name.
+     */
+    public name: string;
+
+    /**
+     * Page name.
+     */
+    public pageName: string;
+
+    /**
+     * drawing ellipse data.
+     */
+    public ellipseData: EllipseData;
+
+    /**
+     * Document folder.
+     */
+    public folder: string;
+
+    public constructor(init?: Partial<PutDrawEllipseRequest>) {
+        Object.assign(this, init);
+    }
+}
+
+/**
+ * Request model for PutDrawLine operation.
+ */
+export class PutDrawLineRequest {
+    /**
+     * Document name.
+     */
+    public name: string;
+
+    /**
+     * Page name.
+     */
+    public pageName: string;
+
+    /**
+     * drawing line data.
+     */
+    public lineData: LineData;
+
+    /**
+     * Document folder.
+     */
+    public folder: string;
+
+    public constructor(init?: Partial<PutDrawLineRequest>) {
+        Object.assign(this, init);
+    }
+}
+
+/**
+ * Request model for PutDrawPolyline operation.
+ */
+export class PutDrawPolylineRequest {
+    /**
+     * Document name.
+     */
+    public name: string;
+
+    /**
+     * Page name.
+     */
+    public pageName: string;
+
+    /**
+     * drawing polyline data.
+     */
+    public polylineData: PolylineData;
+
+    /**
+     * Document folder.
+     */
+    public folder: string;
+
+    public constructor(init?: Partial<PutDrawPolylineRequest>) {
+        Object.assign(this, init);
+    }
+}
+
+/**
+ * page setting info
+ */
+export class PageSetting {
+
+    /**
+     * Attribute type map
+     */
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
+        {
+            name: "name",
+            baseName: "Name",
+            type: "string",
+        },
+        {
+            name: "nameU",
+            baseName: "NameU",
+            type: "string",
+        },
+        {
+            name: "pageWidth",
+            baseName: "PageWidth",
+            type: "number",
+        },
+        {
+            name: "pageHeight",
+            baseName: "PageHeight",
+            type: "number",
+        }];
+
+    /**
+     * Returns attribute type map
+     */
+    public static getAttributeTypeMap() {
+        return PageSetting.attributeTypeMap;
+    }
+
+    /**
+     * Page Name
+     */
+    public name: string;
+
+    /**
+     * Page Name
+     */
+    public nameU: string;
+
+    /**
+     * Page Width
+     */
+    public pageWidth: number;
+
+    /**
+     * Page Height
+     */
+    public pageHeight: number;
+
+    public constructor(init?: Partial<PageSetting>) {
+
+        Object.assign(this, init);
+    }
+}
+
+
+export class PageData {
+
+    /**
+     * Attribute type map
+     */
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
+        {
+            name: "iD",
+            baseName: "ID",
+            type: "number",
+        },
+        {
+            name: "pageSetting",
+            baseName: "PageSetting",
+            type: "PageSetting",
+        },
+        {
+            name: "shapes",
+            baseName: "Shapes",
+            type: "Array<ShapeData>",
+        }];
+
+    /**
+     * Returns attribute type map
+     */
+    public static getAttributeTypeMap() {
+        return PageData.attributeTypeMap;
+    }
+
+    /**
+     * Page Id
+     */
+    public iD: number;
+
+    /**
+     * page setting info
+     */
+    public pageSetting: PageSetting;
+
+    /**
+     * shape list
+     */
+    public shapes: Array<ShapeData>;
+
+    public constructor(init?: Partial<PageData>) {
+
+        Object.assign(this, init);
+    }
+}
+
+export class ShapeData {
+
+    /**
+     * Attribute type map
+     */
+    public static attributeTypeMap: Array<{ name: string, baseName: string, type: string }> = [
+        {
+            name: "iD",
+            baseName: "ID",
+            type: "number",
+        },
+        {
+            name: "pinX",
+            baseName: "PinX",
+            type: "number",
+        },
+        {
+            name: "pinY",
+            baseName: "PinY",
+            type: "number",
+        }];
+
+    /**
+     * Returns attribute type map
+     */
+    public static getAttributeTypeMap() {
+        return ShapeData.attributeTypeMap;
+    }
+
+    public iD: number;
+
+    public pinX: number;
+
+    public pinY: number;
+
+    public constructor(init?: Partial<ShapeData>) {
+
+        Object.assign(this, init);
+    }
 }
