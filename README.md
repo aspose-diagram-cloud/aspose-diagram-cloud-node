@@ -54,66 +54,20 @@ For the detailed notes, please visit [Aspose.Diagram Cloud 20.3 Release Notes](h
 
 Firstly, create an account at [Aspose for Cloud](https://dashboard.aspose.cloud/applications) to get your application information. Now execute `npm install aspose-diagram-cloud-node --save` from the command line to install Aspose.Diagram Cloud SDK for Node.js via NPM.
 
-## Create a Diagram File in the Cloud via Node.js
+
+## Create New VDX Diagram File in NodeJs
 
 ```js
-const { DiagramFileApi, DiagramFile_PutCreateRequest } = require("asposediagramcloud");
+	// Get your ClientId and ClientSecret from https://dashboard.aspose.cloud (free registration required).
+	const diagramApi = new DiagramApi("MY_CLIENT_ID", "MY_CLIENT_SECRET");
 
-var AppSid = ""
-var AppKey = ""
-
-diagramFileApi = new DiagramFileApi(AppSid, AppKey);
-
-var req = new DiagramFile_PutCreateRequest();
-req.name = "output.vdx";
-req.isOverwrite = true;
-
-diagramFileApi.diagramFilePutCreate(req).then((result) => {
-    console.log('API Response:', result);
-}).catch(function(err) {
-    // deal with error
-    console.log('Error:', err);
-});
+	var req = new model.CreateNewRequest();
+	req.name = "sample.vdx";
+	req.isOverwrite = true;
+	req.folder = storageTestFOLDER;
+	
+	return diagramApi.diagramNamePut(req).then((result) => { // handle result... });
 ```
-
-## Convert Visio to PDF in the Cloud via Node.js
-
-```js
-const { DiagramFileApi, DiagramFile_PostSaveAsRequest, FileFormatRequest } = require("asposediagramcloud");
-
-var AppSid = ""
-var AppKey = ""
-
-diagramFileApi = new DiagramFileApi(AppSid, AppKey);
-
-var StorageApi = require("asposestoragecloud")
-var config = {'appSid':AppSid, 'apiKey':AppKey};
-var storageApi = new StorageApi(config);
-
-var fileName = 'template.vsd';
-var data_path = '../your path/';
-
-storageApi.PutCreate(fileName, versionId=null, storage=null, file= data_path + fileName , function(responseMessage) {
-	console.log('status:', responseMessage.status);
-	console.log('body:', responseMessage.body);
-});
-
-var req = new DiagramFile_PostSaveAsRequest();
-var format = new FileFormatRequest();
-format.format = "pdf";
-req.name = fileName;
-req.isOverwrite = true;
-req.newfilename = "output.pdf";
-req.format = format;
-
-diagramFileApi.diagramFilePostSaveAs(req).then((result) => {
-    console.log('API Response:', result);
-}).catch(function(err) {
-    // deal with error
-    console.log('Error:', err);
-});
-```
-
 ## Aspose.Diagram Cloud SDKs in Popular Languages
 
 | .NET | Java | PHP | Python | Ruby | Node.js | Android | Perl | Swift |
